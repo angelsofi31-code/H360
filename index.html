@@ -383,7 +383,7 @@ PVelOAXc5qGHjG9Pn8D7+r2TX73Cja1K87KZnbdgyc8N5ft4Ndjp0cI4/UP/1sgMNvVVZ384pLJnguvT
 <div class="band wash ptop"><span class="ring"></span><div class="wrap"><h2 id="h-serv">Lo que ofrecemos</h2><p class="lead">Un equipo de salud que conoce a sus trabajadores, los atiende en la empresa y les da seguimiento.</p></div></div>
 <div class="band" style="padding-top:28px">
 <div class="wrap">
-<div class="feat"><svg class="i" viewBox="0 0 48 48"><circle cx="20" cy="28" r="11"/><path d="M28 20l12-12M30 8h10v10"/></svg><div><h3>Atención especializada en andropausia</h3><p>Consulta privada con cuestionarios validados (ADAM, AMS e IIEF-5), educación, plan de cuidados por escrito y referencia al médico cuando hace falta.</p></div><span class="tag">Comunidad, Empresarial y Plus</span></div>
+<div class="feat"><svg class="i" viewBox="0 0 48 48"><circle cx="20" cy="28" r="11"/><path d="M28 20l12-12M30 8h10v10"/></svg><div><h3>Atención especializada en andropausia</h3><p>Consulta privada con cuestionarios validados (ADAM, AMS e IIEF-5), educación, plan de cuidados por escrito y referencia al médico cuando hace falta.</p></div><span class="tag">En todos los planes con visitas</span></div>
 <div class="svc">
 <div style="--c:#0b6f8c"><svg class="i" viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="8"/><path d="M24 15v18M15 24h18"/></svg><h3>Enfermería</h3><p>Visitas en su empresa, consultas privadas, valoraciones de salud y seguimiento de cada trabajador.</p><span class="tag">En todos los planes con visitas</span></div>
 <div style="--c:#1b8fac"><svg class="i" viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="26" rx="4"/><path d="M17 14v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4M24 21v12M18 27h12"/></svg><h3>Medicina</h3><p>Coordinamos con su médico de empresa. Si no tiene, H360 lleva el médico por un monto adicional.</p><span class="tag">Coordinación en todos los planes</span></div>
@@ -542,14 +542,14 @@ const DIAS = [[0, 3], [0, 2, 4], [0, 1, 3, 4], [0, 1, 2, 3, 4]];
 const MED = [70000, 140000, 210000, 280000];
 const EDUCA = { taller: [65000, 115000, 165000, 215000], charla: [75000, 140000, 205000, 270000], ses: [1, 2, 3, 4] };
 const PLANES = [
-{ k: "Individual", c: "linear-gradient(135deg,#0a5d78,#1b8fac)", c2: "#0b6f8c", p: [660000, 995000, 1330000, 1665000], sub: "Consultas privadas de enfermería en la empresa", inc: "",
-li: ["<b>Visitas de enfermería</b> de 2 a 5 días por semana, según el tamaño", "<b>Consultas privadas</b> cuando el trabajador las necesite", "<b>Toma de presión, glicemia,</b> peso y cintura", "<b>Plan de autocuidado</b> por escrito", "<b>Referencia al médico</b> cuando hace falta"] },
-{ k: "Comunidad", c: "linear-gradient(135deg,#0b6f8c,#2aa6c2)", c2: "#1b8fac", p: [785000, 1210000, 1635000, 2060000], sub: "Para conocer la salud de todos los hombres", inc: "Todo lo de Individual, más:",
-li: ["<b>Valoración de salud integral</b> a todos, cada 3 meses: presión, glicemia, peso, hábitos y ánimo", "<b>Consulta de andropausia</b> con cuestionarios ADAM, AMS e IIEF-5 (40 años o más, o con síntomas)", "<b>Una charla al mes</b>, por ejemplo sobre andropausia o presión y azúcar", "<b>Informe general</b> para la empresa cada 3 meses"] },
-{ k: "Empresarial", c: "linear-gradient(135deg,#0d7f9c,#3ab3cd)", c2: "#1b8fac", p: [880000, 1395000, 1915000, 2430000], sub: "Para atender y acompañar a quienes salen en riesgo", inc: "Todo lo de Comunidad, más:",
-li: ["<b>Consulta de seguimiento cada mes</b> para quienes salen en riesgo", "<b>Psicología:</b> 2 sesiones al mes por cada 50 trabajadores", "<b>Charla o taller</b> práctico de 2 horas cada mes", "<b>Grupo de apoyo</b> entre hombres, una vez al mes", "<b>Coordinación con el médico</b> y referencias por la CCSS"] },
-{ k: "Plus", c: "linear-gradient(135deg,#108aa5,#4fc1d8)", c2: "#2aa6c2", p: [1035000, 1620000, 2210000, 2795000], sub: "Acompañamiento completo y continuo", inc: "Todo lo de Empresarial, más:",
-li: ["<b>Nutrición:</b> 2 consultas al mes por cada 50 trabajadores", "<b>Una campaña de salud cada 3 meses</b>, por ejemplo en noviembre o el Día del Padre", "<b>Enfermería de cabecera:</b> una enfermera de referencia para cada trabajador en riesgo", "<b>Informe mensual</b> para la empresa"] },
+{ k: "Individual", c: "linear-gradient(135deg,#0a5d78,#1b8fac)", c2: "#0b6f8c", p: [660000, 995000, 1330000, 1665000], sub: "Consulta de andropausia en la empresa", inc: "",
+li: ["<b>Visitas de enfermería</b> de 2 a 5 días por semana, según el tamaño", "<b>Consulta de andropausia:</b> valoración, cuestionarios y plan de cuidados", "<b>Informe</b> para la empresa"] },
+{ k: "Comunidad", c: "linear-gradient(135deg,#0b6f8c,#2aa6c2)", c2: "#1b8fac", p: [785000, 1210000, 1635000, 2060000], sub: "Andropausia y salud integral", inc: "Todo lo de Individual, más:",
+li: ["<b>Consulta de valoración integral</b>, aparte de la de andropausia", "<b>Una charla</b> para los trabajadores"] },
+{ k: "Empresarial", c: "linear-gradient(135deg,#0d7f9c,#3ab3cd)", c2: "#1b8fac", p: [880000, 1395000, 1915000, 2430000], sub: "Para dar seguimiento y acompañar", inc: "Todo lo de Comunidad, más:",
+li: ["<b>Seguimiento</b> de la valoración integral y de la de andropausia", "<b>Grupo de apoyo</b> entre hombres", "<b>Psicología</b>", "<b>Laboratorios y médico</b>"] },
+{ k: "Plus", c: "linear-gradient(135deg,#108aa5,#4fc1d8)", c2: "#2aa6c2", p: [1035000, 1620000, 2210000, 2795000], sub: "Acompañamiento completo", inc: "Todo lo de Empresarial, más:",
+li: ["<b>Nutrición</b>", "<b>Una campaña de salud</b>", "<b>Enfermera de cabecera</b>"] },
 { k: "Educa", c: "linear-gradient(135deg,#e2ac2a,#f5d06a)", c2: "#c99a1c", p: null, sub: "Charlas y talleres especializados", inc: "", edu: true,
 li: ["<b>Una charla o un taller práctico</b> al mes", "<b>Una sesión por cada 50 trabajadores</b>, para cubrir los turnos", "<b>Un tema distinto cada mes:</b> andropausia, corazón, estrés y sueño, alimentación o próstata", "<b>No incluye visitas</b> de enfermería; es ideal para empezar"] }
 ];
