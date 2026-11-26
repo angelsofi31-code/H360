@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H360 Salud Masculina</title>
+<meta name="description" content="H360: consultoría de enfermería con atención especializada en andropausia y salud del hombre para empresas de Alajuela, Costa Rica. Planes mensuales desde 25 trabajadores.">
+<meta property="og:title" content="H360 · Planes de salud masculina para empresas">
+<meta property="og:description" content="Enfermería que llega a su empresa: andropausia, medicina, psicología y nutrición. Contratos de 1, 3 o 6 meses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* VOICE  clínico, fresco y confiable, para gerencias y Salud Ocupacional
+IDEA   la agenda semanal de visitas de la enfermera, con los colores del logo H360
+PICTURE cotizador con la semana de visitas (L a V) que se llena según el tamaño
+COLOUR degradado crema a aqua del logo; turquesa profundo de la H; cian del nombre; dorado del aro
+TYPE   Montserrat 800 para títulos, Montserrat 500 para texto
+LAYOUT apartados separados por menú; laptop: título a la izquierda y cotizador a la derecha; tablet y teléfono: una columna */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#05212a);--ink:light-dark(#0b3442,#e2f6f9);--mut:light-dark(#4b6974,#a0c6ce);--line:light-dark(#cde8ee,#174652);--card:light-dark(#ffffff,#082c36);--brand:light-dark(#0b6f8c,#7fdcec);--cyan:light-dark(#1d8fac,#5fd0e4);--gold:#f5d06a;--w1:light-dark(#fffaea,#05262e);--w2:light-dark(#e6fbf5,#063440);--w3:light-dark(#d9fbff,#07404c);--soft:light-dark(#f1fbfc,#062832)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 16px/1.6 Montserrat,"Segoe UI",Arial,sans-serif;overflow-x:clip}
+h1,h2,h3{font-weight:800;line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(34px,5vw,58px);color:var(--brand)}
+h2{font-size:clamp(30px,4vw,46px);color:var(--brand)}
+h3{font-size:19px}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding-block:clamp(34px,5vw,72px);padding-inline:max(5vw,16px)}
+.lead{font-size:17px;color:var(--mut);max-width:64ch;margin-top:14px}
+.i{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font:700 16px Montserrat,Arial,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;text-align:center}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.b-main{background:linear-gradient(135deg,#0a6683,#1b8fac);color:#fff}.b-main:hover{background:linear-gradient(135deg,#0b7392,#21a0bf)}
+.b-gold{background:var(--gold);color:#2b2205}.b-gold:hover{background:#f8da80}
+.b-out{border-color:var(--brand);color:var(--brand);background:transparent}.b-out:hover{background:color-mix(in srgb,var(--brand) 10%,transparent)}
+.b-wa{background:#1f9d55;color:#fff}.b-wa:hover{background:#178547}
+.b-ghost{border-color:var(--line);color:var(--ink);background:var(--card)}.b-ghost:hover{border-color:var(--cyan)}
+/* encabezado y menú */
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:8px max(5vw,16px)}
+.hd{display:flex;align-items:center;gap:14px;position:relative}
+.brandmark{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo{height:48px;width:auto;border-radius:10px;background:light-dark(transparent,#ffffff);padding:3px}
+.wm{font-size:26px;font-weight:800;color:light-dark(#3aa9c2,#6fd3e6);letter-spacing:-.01em}
+nav.main{display:flex;gap:2px;margin-left:auto}
+nav.main a{text-decoration:none;font-weight:600;font-size:15px;padding:10px 11px;border-radius:10px;color:var(--ink);white-space:nowrap}
+nav.main a:hover{background:var(--soft)}
+nav.main a[aria-current=page]{color:var(--brand);background:color-mix(in srgb,var(--cyan) 14%,transparent)}
+.menu{display:none;margin-left:auto;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:700 15px Montserrat,Arial,sans-serif;align-items:center;gap:8px;cursor:pointer}
+.menu svg{width:20px;height:20px}
+.hd .cta{min-height:44px;padding:0 18px}
+@media(max-width:1100px){
+.menu{display:inline-flex}
+nav.main{display:none;position:absolute;top:calc(100% + 9px);left:calc(-1 * max(5vw,16px));right:calc(-1 * max(5vw,16px));flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px max(5vw,16px) 14px;box-shadow:0 18px 30px rgba(5,40,50,.12)}
+nav.main.open{display:flex}
+nav.main a{padding:13px 12px;font-size:16px}
+}
+@media(max-width:520px){.hd .cta{display:none}.wm{font-size:22px}.logo{height:42px}}
+/* portada */
+.wash{background:linear-gradient(100deg,var(--w1) 0%,var(--w2) 50%,var(--w3) 100%);position:relative;overflow:hidden}
+.ring{position:absolute;border-radius:50%;border:solid var(--gold);pointer-events:none}
+.swoosh{position:absolute;left:-5%;right:-5%;bottom:-40px;height:180px;pointer-events:none;opacity:.55}
+.hg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(26px,4vw,56px);align-items:center;position:relative;z-index:1}
+.hero .lead{font-size:18px;color:var(--ink);opacity:.86}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:26px 0 28px}
+.facts div{border-top:3px solid var(--cyan);padding-top:10px;font-size:14px;color:var(--mut)}
+.facts b{display:block;font-size:clamp(17px,2vw,21px);color:var(--brand);white-space:nowrap}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:860px){.hg{grid-template-columns:minmax(0,1fr);gap:22px}.hg>div:first-child{display:contents}.hero h1{order:1}.hero .lead{order:2;margin-top:0}.calc{order:3}.facts{order:4;margin:0}.hero .ctas{order:5}}
+/* cotizador */
+.calc{background:var(--card);border-radius:24px;padding:clamp(18px,2.4vw,28px);box-shadow:0 20px 44px rgba(8,80,100,.16);border:1px solid var(--line)}
+.calc h3{font-size:22px;color:var(--brand)}
+.calc .sub{font-size:14px;color:var(--mut);margin-top:4px}
+.fl{font-size:14px;font-weight:700;margin:16px 0 8px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{min-height:42px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:600 14px Montserrat,Arial,sans-serif;cursor:pointer;white-space:nowrap}
+.seg button:hover{border-color:var(--cyan)}
+.seg button[aria-pressed=true]{background:#0b6f8c;border-color:#0b6f8c;color:#fff}
+.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:16px}
+.day{font:700 13px Montserrat,Arial,sans-serif;cursor:pointer;border-radius:12px;background:var(--soft);border:1.5px dashed var(--line);padding:8px 4px;text-align:center;font-size:13px;font-weight:700;color:var(--mut);min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;transition:background .35s,border-color .35s,color .35s}
+.day.on{background:linear-gradient(160deg,#0b6f8c,#2aa6c2);border:1.5px solid #1b8fac;color:#fff}
+.day:hover:not(:disabled){border-color:var(--cyan)}
+.day:disabled{cursor:default}
+.week{margin-top:0}
+.day svg{width:22px;height:22px;opacity:0;transition:opacity .35s}.day.on svg{opacity:1}
+.wcap{font-size:13px;color:var(--mut);margin-top:8px}
+.chk{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:14px;font-weight:600;cursor:pointer}
+.chk input{width:20px;height:20px;margin:1px 0 0;accent-color:#0b6f8c;flex:none}
+.price{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.big{font-size:clamp(32px,4vw,42px);font-weight:800;color:var(--brand);letter-spacing:-.02em;line-height:1.15}
+.big .n{white-space:nowrap}
+.big small{font-size:15px;color:var(--mut);font-weight:600;letter-spacing:0}
+.rows{margin:8px 0 14px;font-size:14px}
+.rows div{display:flex;justify-content:space-between;gap:12px;padding:3px 0}
+.rows span:last-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+.rows .t{font-weight:700;border-top:1px solid var(--line);margin-top:4px;padding-top:7px}
+.calc .btn{width:100%}
+@media(prefers-reduced-motion:reduce){.day,.day svg{transition:none}}
+/* equipo */
+.team{background:linear-gradient(120deg,#0a5d78 0%,#13809e 55%,#33aecb 100%);color:#fff;position:relative;overflow:hidden}
+.trow{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;position:relative;z-index:1}
+.big8{width:clamp(150px,19vw,220px);aspect-ratio:1;border-radius:50%;border:clamp(14px,1.8vw,20px) solid var(--gold);display:grid;place-items:center;font-size:clamp(84px,11vw,130px);font-weight:900;line-height:1;color:#fff;box-shadow:0 0 0 10px rgba(255,255,255,.08)}
+.tk{font-size:15px;font-weight:700;color:var(--gold)}
+.tt{font-size:clamp(30px,4.4vw,54px);font-weight:900;line-height:1.04;letter-spacing:-.025em;margin-top:6px;text-wrap:balance}
+.tt span{color:var(--gold)}
+.team p.tl{font-size:17px;color:#e4f7fb;max-width:60ch;margin-top:14px}
+@media(max-width:640px){.trow{grid-template-columns:minmax(0,1fr);justify-items:start}}
+/* accesos */
+.quick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.quick a{display:flex;flex-direction:column;gap:8px;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;min-height:150px}
+.quick a:hover{border-color:var(--cyan);box-shadow:0 10px 24px rgba(8,80,100,.1)}
+.quick svg{width:40px;height:40px;color:var(--cyan)}
+.quick b{font-size:18px;color:var(--brand)}
+.quick span{font-size:14px;color:var(--mut)}
+.quick em{font-style:normal;font-weight:700;font-size:14px;color:var(--cyan);margin-top:auto}
+@media(max-width:980px){.quick{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.quick{grid-template-columns:minmax(0,1fr)}}
+/* cabecera de cada apartado */
+.ptop{padding-block:clamp(30px,4vw,56px) clamp(24px,3vw,40px)}
+.ptop .ring{width:220px;height:220px;border-width:28px;right:-60px;top:-80px;opacity:.7}
+.ptop .wrap,.team .wrap{position:relative;z-index:1}
+@media(max-width:600px){.hero .ring,.team .ring{display:none}.ptop .ring{width:120px;height:120px;border-width:16px;right:-50px;top:-56px}.pnav{padding-right:64px}}
+/* servicios */
+.feat{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:22px;align-items:center;border-radius:22px;padding:clamp(20px,3vw,32px);color:#fff;background:linear-gradient(120deg,#0a5d78,#1b8fac 60%,#45b5cc)}
+.feat svg{width:64px;height:64px;stroke:#fff}
+.feat h3{font-size:clamp(22px,2.6vw,28px)}
+.feat p{color:#e4f7fb;margin-top:6px;max-width:70ch}
+.feat .tag{background:rgba(255,255,255,.16);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700;white-space:nowrap}
+@media(max-width:760px){.feat{grid-template-columns:minmax(0,1fr)}.feat .tag{justify-self:start;white-space:normal}}
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:14px}
+.svc>div{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.svc svg{width:44px;height:44px;color:var(--c)}
+.svc p{font-size:15px;color:var(--mut)}
+.svc .tag{margin-top:auto;font-size:13px;font-weight:700;color:var(--brand)}
+@media(max-width:980px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.svc{grid-template-columns:minmax(0,1fr)}}
+/* planes */
+.ph{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.plans{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:4px}
+@media(max-width:1180px){.plans{grid-template-columns:repeat(2,minmax(0,1fr))}.plan:last-child{grid-column:1/-1}}
+@media(max-width:600px){.plans{grid-template-columns:minmax(0,1fr)}}
+.plan{background:var(--card);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line)}
+.plan .top{background:var(--c);color:#fff;padding:15px 18px}
+.plan .top small{display:block;font-size:13px;opacity:.92;font-weight:600}
+.plan .top b{font-size:25px;font-weight:800;display:block}
+.plan .top i{display:block;font-style:normal;font-size:13px;opacity:.95;margin-top:2px}
+.plan.edu .top{color:#2b2205}
+.plan .body{padding:14px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.plan .inc{font-size:13px;font-weight:700;color:var(--cyan)}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:14.5px;line-height:1.4}
+.plan li{display:flex;gap:8px}
+.plan li svg{width:18px;height:18px;flex:none;margin-top:1px;color:var(--c2)}
+.plan li b{font-weight:700}
+.plan .pr{margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}
+.plan .pr b{font-size:24px;font-weight:800;color:var(--brand);white-space:nowrap}
+.plan .pr span{display:block;font-size:13px;color:var(--mut)}
+.plan .btn{min-height:44px;font-size:15px;margin-top:10px;width:100%}
+.med{margin-top:16px;background:var(--card);border:1px solid var(--line);border-left:8px solid var(--gold);border-radius:18px;padding:18px 22px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px;align-items:center}
+.med h3{color:var(--brand);font-size:20px}
+.med p{font-size:15px;color:var(--mut);margin-top:6px}
+.chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.chips div{border:1px solid var(--line);border-radius:12px;padding:8px 6px;text-align:center;font-size:12px;color:var(--mut)}
+.chips b{display:block;font-size:16px;color:var(--brand);white-space:nowrap}
+@media(max-width:860px){.med{grid-template-columns:minmax(0,1fr)}.chips{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.note{font-size:14px;color:var(--mut);margin-top:14px}
+/* andropausia */
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media(max-width:820px){.two{grid-template-columns:minmax(0,1fr)}}
+.signs{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.signs span{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600}
+.warn{margin-top:20px;font-size:15px;color:var(--mut);border-left:4px solid var(--gold);padding-left:14px}
+.route{list-style:none;margin:0;padding:0}
+.route li{position:relative;padding:0 0 22px 48px}
+.route li::before{content:"";position:absolute;left:14px;top:30px;bottom:0;width:3px;background:var(--line)}
+.route li:last-child::before{display:none}
+.route .dot{position:absolute;left:0;top:0;width:31px;height:31px;border-radius:50%;background:linear-gradient(135deg,#0b6f8c,#2aa6c2);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}
+.route h3{font-size:18px;color:var(--brand)}
+.route p{font-size:15px;color:var(--mut);margin-top:4px}
+/* cómo trabajamos */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));counter-reset:s}
+.steps>div{position:relative;padding:46px 14px 0 0}
+.steps>div::before{content:"";position:absolute;left:0;right:0;top:16px;height:4px;background:var(--cyan);opacity:.35}
+.steps>div::after{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0b6f8c,#2aa6c2);color:#fff;display:grid;place-items:center;font-weight:800}
+.steps h3{font-size:17px;color:var(--brand)}
+.steps p{font-size:14px;color:var(--mut);margin-top:6px}
+@media(max-width:860px){.steps{grid-template-columns:minmax(0,1fr)}.steps>div{padding:0 0 20px 52px}.steps>div::before{left:16px;right:auto;top:36px;bottom:0;width:4px;height:auto}}
+.trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+.trust>div{border-radius:18px;padding:20px;color:#fff;display:flex;gap:14px}
+.trust svg{width:40px;height:40px;flex:none;stroke:#fff}
+.trust b{display:block;font-size:17px}
+.trust span{font-size:14px;opacity:.94}
+@media(max-width:860px){.trust{grid-template-columns:minmax(0,1fr)}}
+/* preguntas */
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px}
+@media(max-width:820px){.faq{grid-template-columns:minmax(0,1fr)}}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;font-weight:700;font-size:17px;padding:14px 30px 14px 0;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:24px;color:var(--cyan)}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 16px;color:var(--mut);max-width:75ch}
+/* contacto */
+.cg{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:start}
+@media(max-width:900px){.cg{grid-template-columns:minmax(0,1fr)}}
+form,.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(18px,2.6vw,30px)}
+@media(min-width:901px){.card{position:sticky;top:96px}}
+.fg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px}
+.fg .w{grid-column:1/-1}
+@media(max-width:560px){.fg{grid-template-columns:minmax(0,1fr)}}
+label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+label i{color:#c0392b;font-style:normal}
+input,select,textarea{width:100%;font:500 16px Montserrat,Arial,sans-serif;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:11px 12px;min-height:48px}
+textarea{min-height:110px;resize:vertical}
+.err{font-size:13px;color:#c0392b;margin-top:4px}
+.bad{border-color:#c0392b}
+form>.btn{margin-top:18px}
+.ready{margin-top:18px;border-radius:16px;background:var(--soft);border:1px solid var(--line);padding:18px}
+.ready h3{font-size:18px;color:var(--brand)}
+.ready pre{white-space:pre-wrap;overflow-wrap:anywhere;font:500 14px/1.5 Montserrat,Arial,sans-serif;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:12px 0;max-height:240px;overflow:auto}
+.ready .ctas .btn{min-height:44px}
+.card h3{color:var(--brand);font-size:20px}
+.ci{display:grid;gap:14px;margin:16px 0}
+.ci>div{display:flex;gap:12px;align-items:flex-start}
+.ci svg{width:26px;height:26px;flex:none;color:var(--cyan);margin-top:2px}
+.ci small{display:block;font-size:13px;color:var(--mut)}
+.ci b{font-size:16px;overflow-wrap:anywhere}
+.card .btn{width:100%;margin-top:6px}
+/* navegación entre apartados */
+.pnav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:clamp(28px,4vw,44px);padding-top:20px;border-top:1px solid var(--line)}
+.pnav .btn{min-height:46px}
+footer{background:light-dark(#0a4d63,#031a21);color:#d6eef3;padding:30px max(5vw,16px)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 28px;justify-content:space-between;align-items:center}
+footer .wm{color:#fff}
+footer nav{display:flex;flex-wrap:wrap;gap:4px}
+footer nav a{color:#d6eef3;font-size:14px;text-decoration:none;padding:8px 10px;border-radius:8px}
+footer nav a:hover{background:rgba(255,255,255,.1)}
+footer p{font-size:13px}
+.float{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 10px 24px rgba(0,0,0,.22)}
+@media(max-width:600px){.float span{display:none}.float{width:56px;height:56px;padding:0}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap hd">
+<a class="brandmark" href="#inicio" aria-label="H360, inicio"><img class="logo" src="data:image/png;base64,
+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" alt="Logo de H360"><span class="wm">H360°</span></a>
+<nav class="main" id="nav" aria-label="Apartados">
+<a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#planes">Planes</a><a href="#andropausia">Andropausia</a><a href="#como">Cómo trabajamos</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a>
+</nav>
+<button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="nav"><svg class="i" viewBox="0 0 48 48"><path d="M8 14h32M8 24h32M8 34h32"/></svg>Menú</button>
+<a class="btn b-main cta" href="#contacto">Solicitar cita</a>
+</div>
+</header>
+<main>
+<!-- INICIO -->
+<section data-page="inicio" aria-label="Inicio">
+<div class="band wash hero">
+<span class="ring" style="width:300px;height:300px;border-width:34px;right:-90px;top:-110px;opacity:.75"></span>
+<svg class="swoosh" viewBox="0 0 1200 180" preserveAspectRatio="none" aria-hidden="true"><path d="M0 150 C 300 40, 800 20, 1200 120" fill="none" stroke="#7ae3f5" stroke-width="26" stroke-linecap="round"/></svg>
+<div class="wrap hg">
+<div>
+<h1>Salud masculina que llega a su empresa</h1>
+<p class="lead">H360 es una consultoría de enfermería con atención especializada en andropausia y salud del hombre. Visitamos su empresa de lunes a viernes y trabajamos junto a su médico de empresa y la CCSS.</p>
+<div class="facts">
+<div><b>Desde 25</b>trabajadores</div>
+<div><b>1, 3 o 6</b>meses de contrato</div>
+<div><b>Alajuela</b>Costa Rica</div>
+</div>
+<div class="ctas"><a class="btn b-gold" href="#contacto">Solicitar una cita</a><a class="btn b-out" href="#planes">Ver los planes</a></div>
+</div>
+<div class="calc" aria-labelledby="ct">
+<h3 id="ct">Calcule su plan</h3>
+<p class="sub">Escoja el tamaño de su empresa y el plan. El precio se actualiza al instante.</p>
+<div class="fl" id="l-tier">Trabajadores</div>
+<div class="seg" id="c-tier" role="group" aria-labelledby="l-tier"></div>
+<div class="fl" id="l-plan">Plan</div>
+<div class="seg" id="c-plan" role="group" aria-labelledby="l-plan"></div>
+<div class="fl" id="l-dur">Contrato</div>
+<div class="seg" id="c-dur" role="group" aria-labelledby="l-dur"></div>
+<div id="c-modo-w" hidden><div class="fl" id="l-modo">Modalidad</div><div class="seg" id="c-modo" role="group" aria-labelledby="l-modo"></div></div>
+<div id="week-w"><div class="fl" id="l-week">Días de visita</div><div class="week" id="week" role="group" aria-labelledby="l-week"></div></div>
+<p class="wcap" id="wcap"></p>
+<label class="chk" id="medw"><input type="checkbox" id="c-med"><span>Agregar médico de H360 (para empresas sin médico de empresa)</span></label>
+<div class="price" aria-live="polite">
+<div class="big" id="big"></div>
+<div class="rows" id="rows"></div>
+<button class="btn b-main" type="button" id="c-go">Solicitar este plan</button>
+</div>
+</div>
+</div>
+</div>
+<div class="band team">
+<span class="ring" style="width:260px;height:260px;border-width:30px;left:-110px;bottom:-140px;opacity:.35"></span>
+<div class="wrap trow">
+<div class="big8" aria-hidden="true">8</div>
+<div>
+<div class="tk">Nuestro equipo</div>
+<p class="tt">8 profesionales en enfermería fundaron <span>H360</span></p>
+<p class="tl">Nos enfocamos en la andropausia y la salud del hombre en el lugar de trabajo. Valoramos, educamos y acompañamos a cada trabajador, y coordinamos con el médico cuando hace falta.</p>
+</div>
+</div>
+</div>
+<div class="band">
+<div class="wrap quick">
+<a href="#servicios"><svg class="i" viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="8"/><path d="M24 15v18M15 24h18"/></svg><b>Lo que ofrecemos</b><span>Enfermería, medicina, psicología, nutrición y andropausia.</span><em>Ver servicios →</em></a>
+<a href="#planes"><svg class="i" viewBox="0 0 48 48"><path d="M24 5l16 6v11c0 10-7 18-16 21C15 40 8 32 8 22V11z"/><path d="M24 16v14M17 23h14"/></svg><b>Planes y precios</b><span>Cinco planes mensuales según el tamaño de su empresa.</span><em>Ver planes →</em></a>
+<a href="#andropausia"><svg class="i" viewBox="0 0 48 48"><circle cx="20" cy="28" r="11"/><path d="M28 20l12-12M30 8h10v10"/></svg><b>Andropausia</b><span>Qué es, cómo se nota y cómo la atendemos.</span><em>Saber más →</em></a>
+<a href="#como"><svg class="i" viewBox="0 0 48 48"><path d="M6 36c8 0 8-12 18-12s10-12 18-12"/><circle cx="6" cy="36" r="3"/><circle cx="42" cy="12" r="3"/></svg><b>Cómo trabajamos</b><span>Los pasos para empezar con su empresa.</span><em>Ver el proceso →</em></a>
+</div>
+</div>
+</section>
+<!-- SERVICIOS -->
+<section data-page="servicios" aria-labelledby="h-serv" hidden>
+<div class="band wash ptop"><span class="ring"></span><div class="wrap"><h2 id="h-serv">Lo que ofrecemos</h2><p class="lead">Un equipo de salud que conoce a sus trabajadores, los atiende en la empresa y les da seguimiento.</p></div></div>
+<div class="band" style="padding-top:28px">
+<div class="wrap">
+<div class="feat"><svg class="i" viewBox="0 0 48 48"><circle cx="20" cy="28" r="11"/><path d="M28 20l12-12M30 8h10v10"/></svg><div><h3>Atención especializada en andropausia</h3><p>Consulta privada con cuestionarios validados (ADAM, AMS e IIEF-5), educación, plan de cuidados por escrito y referencia al médico cuando hace falta.</p></div><span class="tag">Comunidad, Empresarial y Plus</span></div>
+<div class="svc">
+<div style="--c:#0b6f8c"><svg class="i" viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="8"/><path d="M24 15v18M15 24h18"/></svg><h3>Enfermería</h3><p>Visitas en su empresa, consultas privadas, valoraciones de salud y seguimiento de cada trabajador.</p><span class="tag">En todos los planes con visitas</span></div>
+<div style="--c:#1b8fac"><svg class="i" viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="26" rx="4"/><path d="M17 14v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4M24 21v12M18 27h12"/></svg><h3>Medicina</h3><p>Coordinamos con su médico de empresa. Si no tiene, H360 lleva el médico por un monto adicional.</p><span class="tag">Coordinación en todos los planes</span></div>
+<div style="--c:#2aa6c2"><svg class="i" viewBox="0 0 48 48"><path d="M8 10h32a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H22l-8 7v-7H8a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4z"/><path d="M24 28s-7-4-7-8.5a3.5 3.5 0 0 1 7-1 3.5 3.5 0 0 1 7 1C31 24 24 28 24 28z"/></svg><h3>Psicología</h3><p>Acompañamiento para el estrés y el ánimo bajo: 2 sesiones al mes por cada 50 trabajadores.</p><span class="tag">Empresarial y Plus</span></div>
+<div style="--c:#c99a1c"><svg class="i" viewBox="0 0 48 48"><path d="M24 14c-3-3-10-3-13 2-4 7 1 22 7 23 3 .5 4-1 6-1s3 1.5 6 1c6-1 11-16 7-23-3-5-10-5-13-2z"/><path d="M24 14c0-4 2-7 6-8"/></svg><h3>Nutrición</h3><p>Planes de alimentación adaptados al trabajo por turnos: 2 consultas al mes por cada 50 trabajadores.</p><span class="tag">Plan Plus</span></div>
+</div>
+<div class="pnav"></div>
+</div>
+</div>
+</section>
+<!-- PLANES -->
+<section data-page="planes" aria-labelledby="h-plan" hidden>
+<div class="band wash ptop"><span class="ring"></span><div class="wrap ph">
+<div><h2 id="h-plan">Cinco planes, de menos a más</h2><p class="lead">Individual, Comunidad, Empresarial y Plus incluyen cada uno todo lo del anterior. Educa es solo educativo y es ideal para empezar.</p></div>
+<div><div class="fl" id="l-tier2" style="margin-top:0">Precios para empresas de</div><div class="seg" id="p-tier" role="group" aria-labelledby="l-tier2"></div></div>
+</div></div>
+<div class="band" style="padding-top:28px">
+<div class="wrap">
+<div class="plans" id="plans"></div>
+<div class="med">
+<div><h3>¿Su empresa no tiene médico de empresa? H360 lleva el médico</h3><p>Un médico general atiende a los trabajadores que refiere enfermería: 2 consultas al mes por cada 50 trabajadores. Aplica para Individual, Comunidad, Empresarial y Plus. La empresa puede inscribirse con este médico en el sistema de medicina de empresa de la CCSS, para que los exámenes y las referencias sigan por ahí.</p></div>
+<div class="chips" id="medchips"></div>
+</div>
+<p class="note">Precios mensuales en colones, sin IVA (4%). Incluyen viáticos e insumos. Para más de 200 trabajadores se cotiza aparte.</p>
+<div class="pnav"></div>
+</div>
+</div>
+</section>
+<!-- ANDROPAUSIA -->
+<section data-page="andropausia" aria-labelledby="h-andro" hidden>
+<div class="band wash ptop"><span class="ring"></span><div class="wrap"><h2 id="h-andro">La andropausia sí se puede atender</h2><p class="lead">Con los años, algunos hombres notan cambios que afectan su energía, su ánimo y su vida sexual. Es gradual, no le pasa a todos y tiene manejo. Muchos no consultan por vergüenza; por eso la llevamos a la empresa, en privado.</p></div></div>
+<div class="band" style="padding-top:28px">
+<div class="wrap">
+<div class="two">
+<div>
+<h3 style="font-size:22px;color:var(--brand)">Señales que puede notar</h3>
+<div class="signs"><span>Cansancio</span><span>Menos deseo sexual</span><span>Problemas de erección</span><span>Irritabilidad o tristeza</span><span>Mal sueño</span><span>Pérdida de fuerza</span><span>Más grasa abdominal</span><span>Sudoración</span></div>
+<p class="warn">Advertimos sobre los riesgos de usar testosterona, anabólicos o "potenciadores" sin receta. El diagnóstico y el tratamiento los decide el médico.</p>
+</div>
+<div>
+<h3 style="font-size:22px;color:var(--brand);margin-bottom:18px">Así es la consulta de andropausia</h3>
+<ol class="route">
+<li><span class="dot">1</span><h3>Valoración</h3><p>Entrevista sobre síntomas y hábitos, cuestionarios ADAM, AMS e IIEF-5, presión, glicemia, peso y cintura, y preguntas sobre el estado de ánimo.</p></li>
+<li><span class="dot">2</span><h3>Educación</h3><p>Qué es la andropausia y qué la mejora: ejercicio de fuerza, bajar de peso, dormir bien, menos alcohol y manejo del estrés. Orientación sobre la próstata.</p></li>
+<li><span class="dot">3</span><h3>Plan de cuidados</h3><p>Metas de autocuidado por escrito, sencillas y medibles. Si el trabajador lo desea, orientación también para su pareja.</p></li>
+<li><span class="dot">4</span><h3>Referencia y seguimiento</h3><p>Si hace falta, referencia al médico, que decide si pide exámenes por la CCSS. Control de enfermería entre 4 y 8 semanas después.</p></li>
+</ol>
+</div>
+</div>
+<div class="pnav"></div>
+</div>
+</div>
+</section>
+<!-- CÓMO TRABAJAMOS -->
+<section data-page="como" aria-labelledby="h-como" hidden>
+<div class="band wash ptop"><span class="ring"></span><div class="wrap"><h2 id="h-como">Cómo empezamos con su empresa</h2><p class="lead">Un proceso corto y claro, para que la empresa y los trabajadores nos conozcan antes de comprometerse.</p></div></div>
+<div class="band" style="padding-top:34px">
+<div class="wrap">
+<div class="steps">
+<div><h3>Primer contacto</h3><p>Una reunión para conocer su empresa, sus turnos y lo que necesita.</p></div>
+<div><h3>Prueba con Educa</h3><p>Una charla o un taller para que los trabajadores nos conozcan.</p></div>
+<div><h3>Propuesta</h3><p>El plan y el precio según el tamaño de su empresa.</p></div>
+<div><h3>Contrato y arranque</h3><p>Por 1, 3 o 6 meses. Empiezan las visitas y las valoraciones.</p></div>
+<div><h3>Seguimiento</h3><p>Informes generales para Salud Ocupacional y ajustes en cada renovación.</p></div>
+</div>
+<div class="trust">
+<div style="background:linear-gradient(135deg,#0a5d78,#13809e)"><svg class="i" viewBox="0 0 48 48"><path d="M8 42V14l16-8 16 8v28z"/><path d="M24 17v12M18 23h12"/></svg><div><b>Junto a Medicina de Empresa y la CCSS</b><span>Los exámenes y las referencias siguen por la CCSS, sin costo dentro del plan.</span></div></div>
+<div style="background:linear-gradient(135deg,#13809e,#2a9fbb)"><svg class="i" viewBox="0 0 48 48"><rect x="10" y="21" width="28" height="20" rx="4"/><path d="M16 21v-6a8 8 0 0 1 16 0v6"/></svg><div><b>Privado y confidencial</b><span>Cada trabajador firma un consentimiento informado. La empresa recibe solo informes generales, nunca datos de una persona.</span></div></div>
+<div style="background:linear-gradient(135deg,#b88714,#d9a521)"><svg class="i" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="32" rx="4"/><path d="M6 18h36M15 5v8M33 5v8"/></svg><div><b>Contratación flexible</b><span>Contratos de 1, 3 o 6 meses con pago mensual. Puede cambiar de plan al renovar.</span></div></div>
+</div>
+<div class="pnav"></div>
+</div>
+</div>
+</section>
+<!-- PREGUNTAS -->
+<section data-page="preguntas" aria-labelledby="h-faq" hidden>
+<div class="band wash ptop"><span class="ring"></span><div class="wrap"><h2 id="h-faq">Preguntas frecuentes</h2><p class="lead">Si tiene otra duda, escríbanos y con gusto le respondemos.</p></div></div>
+<div class="band" style="padding-top:22px">
+<div class="wrap">
+<div class="faq"><div>
+<details open><summary>¿Cuántos trabajadores necesita tener la empresa?</summary><p>El mínimo es de 25 trabajadores. Hay precios para 25 a 50, 51 a 100, 101 a 150 y 151 o más. Para más de 200 trabajadores preparamos una cotización aparte.</p></details>
+<details><summary>¿Cada cuánto va la enfermera?</summary><p>En jornadas de 8 horas, de lunes a viernes: 2 veces por semana en empresas de 25 a 50 trabajadores, 3 en las de 51 a 100, 4 en las de 101 a 150 y 5 en las de 151 o más. Los días se acuerdan con la empresa. El plan Educa no incluye visitas.</p></details>
+<details><summary>¿Necesitamos tener médico de empresa?</summary><p>No. Si la empresa no tiene, H360 lleva el médico por un monto adicional al mes, con 2 consultas por cada 50 trabajadores.</p></details>
+<details><summary>¿Los exámenes de laboratorio tienen costo?</summary><p>Los exámenes y las referencias a especialistas los ordena el médico de empresa y los cubre la CCSS, sin costo dentro del plan.</p></details>
+</div><div>
+<details><summary>¿Qué información recibe la empresa?</summary><p>Informes generales: participación, principales factores de riesgo encontrados y recomendaciones para Salud Ocupacional. La empresa nunca recibe datos de una persona.</p></details>
+<details><summary>¿Los precios incluyen IVA?</summary><p>No. A los precios se suma el IVA de 4%. Sí incluyen los viáticos y los insumos.</p></details>
+<details><summary>¿Por cuánto tiempo se contrata?</summary><p>Por 1, 3 o 6 meses, con pago mensual. Al renovar puede cambiar de plan.</p></details>
+<details><summary>¿Qué plan nos conviene?</summary><p>Depende de lo que busque la empresa. Para empezar, Educa o Individual; para conocer la salud de todos, Comunidad; para acompañar a quienes salen en riesgo, Empresarial o Plus. En el formulario de contacto puede pedirnos una recomendación.</p></details>
+</div></div>
+<div class="pnav"></div>
+</div>
+</div>
+</section>
+<!-- CONTACTO -->
+<section data-page="contacto" aria-labelledby="h-cont" hidden>
+<div class="band wash ptop"><span class="ring"></span><div class="wrap"><h2 id="h-cont">Solicite una cita</h2><p class="lead">Complete el formulario y envíenos la solicitud por WhatsApp o por correo. Le respondemos para coordinar la reunión.</p></div></div>
+<div class="band" style="padding-top:28px">
+<div class="wrap cg">
+<form id="f" novalidate>
+<div class="fg">
+<div><label for="f-nombre">Nombre completo <i>*</i></label><input id="f-nombre" autocomplete="name"><div class="err" id="e-nombre"></div></div>
+<div><label for="f-empresa">Empresa <i>*</i></label><input id="f-empresa" autocomplete="organization"><div class="err" id="e-empresa"></div></div>
+<div><label for="f-puesto">Puesto</label><select id="f-puesto"><option value="">Seleccione su puesto</option><option>Gerencia o administración</option><option>Recursos Humanos</option><option>Salud Ocupacional</option><option>Médico de empresa</option><option>Enfermería de empresa</option><option>Otro</option></select></div>
+<div><label for="f-tel">Teléfono <i>*</i></label><input id="f-tel" type="tel" autocomplete="tel" inputmode="tel"><div class="err" id="e-tel"></div></div>
+<div class="w"><label for="f-correo">Correo</label><input id="f-correo" type="email" autocomplete="email"><div class="err" id="e-correo"></div></div>
+<div><label for="f-trab">Trabajadores</label><select id="f-trab"><option>25 a 50</option><option>51 a 100</option><option>101 a 150</option><option>151 a 200</option><option>Más de 200</option></select></div>
+<div><label for="f-plan">Plan de interés</label><select id="f-plan"><option>Quiero una recomendación</option><option>Individual</option><option>Comunidad</option><option>Empresarial</option><option>Plus</option><option>Educa</option></select></div>
+<div><label for="f-tipo">Tipo de cita</label><select id="f-tipo"><option>Reunión en la empresa</option><option>Reunión virtual</option><option>Llamada</option><option>Charla de prueba (plan Educa)</option></select></div>
+<div><label for="f-fecha">Fecha preferida</label><input id="f-fecha" type="date"></div>
+<div class="w"><div class="fl" id="l-fdias" style="margin:0 0 6px">Días de visita preferidos</div><div class="seg" id="f-dias" role="group" aria-labelledby="l-fdias"></div></div>
+<div class="w"><label for="f-hora">Horario preferido</label><select id="f-hora"><option>Mañana</option><option>Tarde</option><option>Cualquiera</option></select></div>
+<div class="w"><label for="f-msj">Mensaje</label><textarea id="f-msj" placeholder="Cuéntenos de su empresa: turnos, si tiene médico de empresa, lo que le interesa."></textarea></div>
+</div>
+<button class="btn b-main" type="submit">Preparar solicitud</button>
+<div class="ready" id="ready" aria-live="polite" hidden>
+<h3>Su solicitud está lista</h3>
+<p style="font-size:15px;color:var(--mut);margin-top:4px">Para enviarla, elija WhatsApp o correo. Si no se abre, copie el texto y envíelo al número o al correo de contacto.</p>
+<pre id="msg"></pre>
+<div class="ctas"><a class="btn b-wa" id="go-wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a><a class="btn b-ghost" id="go-mail" href="#">Enviar por correo</a><button class="btn b-ghost" type="button" id="go-copy">Copiar texto</button></div>
+</div>
+</form>
+<aside class="card" aria-labelledby="cc">
+<h3 id="cc">Contacto directo</h3>
+<div class="ci">
+<div><svg class="i" viewBox="0 0 48 48"><path d="M8 40l3-9a16 16 0 1 1 6 6z"/><path d="M18 18c0 6 6 12 12 12l3-3-4-3-2 2c-2-1-4-3-5-5l2-2-3-4z"/></svg><div><small>WhatsApp y teléfono</small><b id="t-tel"></b></div></div>
+<div><svg class="i" viewBox="0 0 48 48"><rect x="5" y="10" width="38" height="28" rx="4"/><path d="M6 13l18 13 18-13"/></svg><div><small>Correo</small><b id="t-mail"></b></div></div>
+<div><svg class="i" viewBox="0 0 48 48"><path d="M24 43s14-13 14-24a14 14 0 0 0-28 0c0 11 14 24 14 24z"/><circle cx="24" cy="19" r="5"/></svg><div><small>Dónde trabajamos</small><b>Alajuela, Costa Rica</b></div></div>
+<div><svg class="i" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 14v10l7 5"/></svg><div><small>Atención</small><b>Lunes a viernes</b></div></div>
+</div>
+<a class="btn b-wa" id="wa-direct" href="#" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+<a class="btn b-ghost" id="tel-direct" href="#">Llamar</a>
+<a class="btn b-ghost" id="mail-direct" href="#">Escribir un correo</a>
+</aside>
+</div>
+<div class="wrap"><div class="pnav"></div></div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<a class="brandmark" href="#inicio"><img class="logo" id="logo2" alt="" style="background:#fff"><span class="wm">H360°</span></a>
+<nav aria-label="Pie de página"><a href="#servicios">Servicios</a><a href="#planes">Planes</a><a href="#andropausia">Andropausia</a><a href="#como">Cómo trabajamos</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a></nav>
+<p>H360 · Salud masculina para empresas · Alajuela, Costa Rica · © 2026</p>
+</div>
+</footer>
+<a class="btn b-wa float" id="wa-float" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="i" viewBox="0 0 48 48" width="24" height="24" style="stroke:#fff"><path d="M8 40l3-9a16 16 0 1 1 6 6z"/><path d="M18 18c0 6 6 12 12 12l3-3-4-3-2 2c-2-1-4-3-5-5l2-2-3-4z"/></svg><span>Escríbanos</span></a>
+<script>
+{
+const CONTACTO = { wa: "50688880360", tel: "8888-0360", correo: "enfermeriaucrso22@gmail.com" };
+const PAGES = [["inicio", "Inicio"], ["servicios", "Servicios"], ["planes", "Planes"], ["andropausia", "Andropausia"], ["como", "Cómo trabajamos"], ["preguntas", "Preguntas"], ["contacto", "Contacto"]];
+const TIERS = ["25 a 50", "51 a 100", "101 a 150", "151 o más"];
+const FORM_TIERS = ["25 a 50", "51 a 100", "101 a 150", "151 a 200"];
+const VPS = [2, 3, 4, 5];
+const DIAS = [[0, 3], [0, 2, 4], [0, 1, 3, 4], [0, 1, 2, 3, 4]];
+const MED = [70000, 140000, 210000, 280000];
+const EDUCA = { taller: [65000, 115000, 165000, 215000], charla: [75000, 140000, 205000, 270000], ses: [1, 2, 3, 4] };
+const PLANES = [
+{ k: "Individual", c: "linear-gradient(135deg,#0a5d78,#1b8fac)", c2: "#0b6f8c", p: [660000, 995000, 1330000, 1665000], sub: "Consultas privadas de enfermería en la empresa", inc: "",
+li: ["<b>Visitas de enfermería</b> de 2 a 5 días por semana, según el tamaño", "<b>Consultas privadas</b> cuando el trabajador las necesite", "<b>Toma de presión, glicemia,</b> peso y cintura", "<b>Plan de autocuidado</b> por escrito", "<b>Referencia al médico</b> cuando hace falta"] },
+{ k: "Comunidad", c: "linear-gradient(135deg,#0b6f8c,#2aa6c2)", c2: "#1b8fac", p: [785000, 1210000, 1635000, 2060000], sub: "Para conocer la salud de todos los hombres", inc: "Todo lo de Individual, más:",
+li: ["<b>Valoración de salud integral</b> a todos, cada 3 meses: presión, glicemia, peso, hábitos y ánimo", "<b>Consulta de andropausia</b> con cuestionarios ADAM, AMS e IIEF-5 (40 años o más, o con síntomas)", "<b>Una charla al mes</b>, por ejemplo sobre andropausia o presión y azúcar", "<b>Informe general</b> para la empresa cada 3 meses"] },
+{ k: "Empresarial", c: "linear-gradient(135deg,#0d7f9c,#3ab3cd)", c2: "#1b8fac", p: [880000, 1395000, 1915000, 2430000], sub: "Para atender y acompañar a quienes salen en riesgo", inc: "Todo lo de Comunidad, más:",
+li: ["<b>Consulta de seguimiento cada mes</b> para quienes salen en riesgo", "<b>Psicología:</b> 2 sesiones al mes por cada 50 trabajadores", "<b>Charla o taller</b> práctico de 2 horas cada mes", "<b>Grupo de apoyo</b> entre hombres, una vez al mes", "<b>Coordinación con el médico</b> y referencias por la CCSS"] },
+{ k: "Plus", c: "linear-gradient(135deg,#108aa5,#4fc1d8)", c2: "#2aa6c2", p: [1035000, 1620000, 2210000, 2795000], sub: "Acompañamiento completo y continuo", inc: "Todo lo de Empresarial, más:",
+li: ["<b>Nutrición:</b> 2 consultas al mes por cada 50 trabajadores", "<b>Una campaña de salud cada 3 meses</b>, por ejemplo en noviembre o el Día del Padre", "<b>Enfermería de cabecera:</b> una enfermera de referencia para cada trabajador en riesgo", "<b>Informe mensual</b> para la empresa"] },
+{ k: "Educa", c: "linear-gradient(135deg,#e2ac2a,#f5d06a)", c2: "#c99a1c", p: null, sub: "Charlas y talleres especializados", inc: "", edu: true,
+li: ["<b>Una charla o un taller práctico</b> al mes", "<b>Una sesión por cada 50 trabajadores</b>, para cubrir los turnos", "<b>Un tema distinto cada mes:</b> andropausia, corazón, estrés y sueño, alimentación o próstata", "<b>No incluye visitas</b> de enfermería; es ideal para empezar"] }
+];
+const S = { tier: 0, plan: "Comunidad", dur: 1, modo: "taller", med: false, dias: [0, 3] };
+const F = { dias: new Set() };
+const NOMBRES = ["lunes", "martes", "miércoles", "jueves", "viernes"];
+const lista = (arr) => { const a = [...arr].sort((x, y) => x - y).map((i) => NOMBRES[i]); return a.length < 2 ? a.join("") : a.slice(0, -1).join(", ") + " y " + a[a.length - 1]; };
+function ajustarDias() {
+const n = VPS[S.tier];
+S.dias = S.dias.slice(0, n);
+for (const d of [...DIAS[S.tier], 0, 1, 2, 3, 4]) { if (S.dias.length >= n) break; if (!S.dias.includes(d)) S.dias.push(d); }
+}
+const $ = (id) => document.getElementById(id);
+const fmt = (n) => "₡" + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const CHECK = '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="currentColor"/><path d="M6 10.5l2.7 2.7L14.5 7.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const CROSS = '<svg class="i" viewBox="0 0 48 48" style="stroke:#fff"><path d="M24 12v24M12 24h24"/></svg>';
+/* apartados */
+const secciones = [...document.querySelectorAll("section[data-page]")];
+const navLinks = [...document.querySelectorAll("nav.main a")];
+const menuBtn = $("menu"), nav = $("nav");
+const cerrarMenu = () => { nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); };
+menuBtn.addEventListener("click", () => { const o = nav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", String(o)); });
+document.querySelectorAll(".pnav").forEach((el) => {
+const id = el.closest("section").dataset.page;
+const i = PAGES.findIndex(([p]) => p === id);
+const prev = PAGES[i - 1], next = PAGES[i + 1];
+el.innerHTML = (prev ? `<a class="btn b-ghost" href="#${prev[0]}">← ${prev[1]}</a>` : "<span></span>")
++ (next ? `<a class="btn b-main" href="#${next[0]}">${next[1]} →</a>` : `<a class="btn b-main" href="#inicio">Volver al inicio</a>`);
+});
+function mostrar(primera) {
+const h = location.hash.slice(1);
+const id = PAGES.some(([p]) => p === h) ? h : "inicio";
+secciones.forEach((s) => { s.hidden = s.dataset.page !== id; });
+navLinks.forEach((a) => { if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+cerrarMenu();
+if (!primera) window.scrollTo(0, 0);
+}
+window.addEventListener("hashchange", () => mostrar(false));
+/* cotizador y planes */
+const seg = (el, opts, cur, on) => {
+el.innerHTML = opts.map((o) => `<button type="button" data-v="${esc(o.v)}" aria-pressed="${String(o.v) === String(cur)}">${esc(o.t)}</button>`).join("");
+el.onclick = (e) => { const b = e.target.closest("button"); if (b) on(b.dataset.v); };
+};
+const precioPlan = () => S.plan === "Educa" ? EDUCA[S.modo][S.tier] : PLANES.find((p) => p.k === S.plan).p[S.tier];
+function drawCalc() {
+seg($("c-tier"), TIERS.map((t, i) => ({ v: i, t })), S.tier, (v) => { S.tier = +v; ajustarDias(); render(); });
+seg($("c-plan"), PLANES.map((p) => ({ v: p.k, t: p.k })), S.plan, (v) => { S.plan = v; render(); });
+seg($("c-dur"), [1, 3, 6].map((d) => ({ v: d, t: d === 1 ? "1 mes" : d + " meses" })), S.dur, (v) => { S.dur = +v; render(); });
+seg($("c-modo"), [{ v: "taller", t: "Taller" }, { v: "charla", t: "Charla" }], S.modo, (v) => { S.modo = v; render(); });
+const edu = S.plan === "Educa";
+$("c-modo-w").hidden = !edu;
+$("medw").hidden = edu;
+const n = VPS[S.tier], todos = n === 5;
+$("week-w").hidden = edu;
+$("week").innerHTML = ["Lun", "Mar", "Mié", "Jue", "Vie"].map((d, i) => {
+const on = S.dias.includes(i);
+return `<button type="button" class="day${on ? " on" : ""}" data-d="${i}" aria-pressed="${on}" aria-label="${NOMBRES[i]}"${todos ? " disabled" : ""}>${CROSS}${d}</button>`;
+}).join("");
+const falta = n - S.dias.length;
+$("wcap").textContent = edu
+? `${EDUCA.ses[S.tier]} ${EDUCA.ses[S.tier] === 1 ? "sesión" : "sesiones"} al mes, una por cada 50 trabajadores. Educa no incluye visitas de enfermería.`
+: todos ? "Con 151 trabajadores o más, la enfermera va los 5 días, de lunes a viernes, en jornadas de 8 horas."
+: falta > 0 ? `Escoja ${falta} ${falta === 1 ? "día" : "días"} más: la enfermera va ${n} días por semana.`
+: `La enfermera va ${n} días por semana, en jornadas de 8 horas: ${lista(S.dias)}. Toque un día para cambiarlo.`;
+const base = precioPlan();
+const med = !edu && S.med ? MED[S.tier] : 0;
+const sub = base + med, iva = Math.round(sub * 0.04);
+$("big").innerHTML = `<span class="n">${fmt(sub)}</span> <small>al mes + IVA</small>`;
+const r = [[`Plan ${S.plan}${edu ? " (" + S.modo + ")" : ""}`, fmt(base)]];
+if (med) r.push(["Médico de H360", fmt(med)]);
+r.push(["IVA (4%)", fmt(iva)], ["Total por mes", fmt(sub + iva), "t"]);
+if (S.dur > 1) r.push([`Total por ${S.dur} meses`, fmt((sub + iva) * S.dur), "t"]);
+$("rows").innerHTML = r.map(([a, b, t]) => `<div class="${t || ""}"><span>${esc(a)}</span><span>${esc(b)}</span></div>`).join("");
+}
+function drawPlans() {
+seg($("p-tier"), TIERS.map((t, i) => ({ v: i, t })), S.tier, (v) => { S.tier = +v; ajustarDias(); render(); });
+$("plans").innerHTML = PLANES.map((p, i) => {
+const pr = p.p ? `<b>${fmt(p.p[S.tier])}</b><span>al mes, empresa de ${esc(TIERS[S.tier])} trabajadores</span>`
+: `<b>${fmt(EDUCA.taller[S.tier])}</b><span>al mes con taller, o ${fmt(EDUCA.charla[S.tier])} con charla</span>`;
+return `<article class="plan${p.edu ? " edu" : ""}" style="--c:${p.c};--c2:${p.c2}"><div class="top"><small>Plan ${i + 1}</small><b>${p.k}</b><i>${esc(p.sub)}</i></div><div class="body">${p.inc ? `<div class="inc">${p.inc}</div>` : ""}<ul>${p.li.map((l) => `<li>${CHECK}<span>${l}</span></li>`).join("")}</ul><div class="pr">${pr}<button class="btn b-ghost" type="button" data-plan="${p.k}">Solicitar</button></div></div></article>`;
+}).join("");
+$("medchips").innerHTML = TIERS.map((t, i) => `<div>${esc(t)}<b>+ ${fmt(MED[i])}</b>al mes</div>`).join("");
+}
+function render() { drawCalc(); drawPlans(); }
+function irAFormulario(plan) {
+$("f-plan").value = plan;
+$("f-trab").value = FORM_TIERS[S.tier];
+F.dias = new Set(plan === "Educa" ? [] : S.dias);
+drawFormDias();
+if (!$("f-msj").value.trim()) {
+const extra = plan !== "Educa" && S.med ? ", con médico de H360" : "";
+$("f-msj").value = `Nos interesa el plan ${plan} por ${S.dur === 1 ? "1 mes" : S.dur + " meses"}${extra}.`;
+}
+location.hash = "contacto";
+setTimeout(() => $("f-nombre").focus({ preventScroll: true }), 300);
+}
+$("c-go").addEventListener("click", () => irAFormulario(S.plan));
+$("week").addEventListener("click", (e) => {
+const b = e.target.closest("button[data-d]");
+if (!b || b.disabled) return;
+const d = +b.dataset.d, n = VPS[S.tier];
+if (S.dias.includes(d)) S.dias = S.dias.filter((x) => x !== d);
+else { if (S.dias.length >= n) S.dias.shift(); S.dias.push(d); }
+render();
+document.querySelector(`#week [data-d="${d}"]`)?.focus();
+});
+function drawFormDias() {
+$("f-dias").innerHTML = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"].map((d, i) => `<button type="button" data-d="${i}" aria-pressed="${F.dias.has(i)}">${d}</button>`).join("");
+}
+$("f-dias").addEventListener("click", (e) => {
+const b = e.target.closest("button[data-d]");
+if (!b) return;
+const d = +b.dataset.d;
+if (F.dias.has(d)) F.dias.delete(d); else F.dias.add(d);
+drawFormDias();
+document.querySelector(`#f-dias [data-d="${d}"]`)?.focus();
+});
+drawFormDias();
+$("plans").addEventListener("click", (e) => { const b = e.target.closest("button[data-plan]"); if (b) { S.plan = b.dataset.plan; render(); irAFormulario(b.dataset.plan); } });
+$("c-med").addEventListener("change", (e) => { S.med = e.target.checked; render(); });
+/* contacto */
+const waUrl = (t) => `https://wa.me/${CONTACTO.wa}${t ? "?text=" + encodeURIComponent(t) : ""}`;
+$("t-tel").textContent = "+506 " + CONTACTO.tel;
+$("t-mail").textContent = CONTACTO.correo;
+$("wa-direct").href = waUrl("Hola H360, quisiera información sobre los planes de salud masculina para mi empresa.");
+$("wa-float").href = $("wa-direct").href;
+$("tel-direct").href = "tel:+506" + CONTACTO.tel.replace(/\D/g, "");
+$("tel-direct").textContent = "Llamar al " + CONTACTO.tel;
+$("mail-direct").href = `mailto:${CONTACTO.correo}?subject=${encodeURIComponent("Información sobre los planes de H360")}`;
+const hoy = new Date(); $("f-fecha").min = new Date(hoy.getTime() - hoy.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+const v = (id) => $(id).value.trim();
+const marcar = (id, msg) => { $("e-" + id.slice(2)).textContent = msg; $(id).classList.toggle("bad", !!msg); return !msg; };
+$("f").addEventListener("submit", (e) => {
+e.preventDefault();
+let ok = marcar("f-nombre", v("f-nombre") ? "" : "Escriba su nombre.");
+ok = marcar("f-empresa", v("f-empresa") ? "" : "Escriba el nombre de la empresa.") && ok;
+ok = marcar("f-tel", v("f-tel").replace(/\D/g, "").length >= 8 ? "" : "Escriba un teléfono de 8 dígitos.") && ok;
+ok = marcar("f-correo", !v("f-correo") || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v("f-correo")) ? "" : "Revise el correo.") && ok;
+if (!ok) { document.querySelector(".bad")?.focus(); $("ready").hidden = true; return; }
+const f = v("f-fecha") ? v("f-fecha").split("-").reverse().join("/") : "A convenir";
+const texto = [
+"Hola H360, quisiera solicitar una cita.", "",
+"Nombre: " + v("f-nombre"), "Empresa: " + v("f-empresa"),
+v("f-puesto") ? "Puesto: " + v("f-puesto") : null, "Teléfono: " + v("f-tel"),
+v("f-correo") ? "Correo: " + v("f-correo") : null,
+"Trabajadores: " + v("f-trab"), "Plan de interés: " + v("f-plan"),
+"Tipo de cita: " + v("f-tipo"), "Fecha preferida: " + f,
+F.dias.size ? "Días de visita preferidos: " + lista(F.dias) : null, "Horario: " + v("f-hora"),
+v("f-msj") ? "Mensaje: " + v("f-msj") : null
+].filter((x) => x !== null).join("\n");
+$("msg").textContent = texto;
+$("go-wa").href = waUrl(texto);
+$("go-mail").href = `mailto:${CONTACTO.correo}?subject=${encodeURIComponent("Solicitud de cita: " + v("f-empresa"))}&body=${encodeURIComponent(texto)}`;
+$("ready").hidden = false;
+$("ready").scrollIntoView({ block: "nearest" });
+});
+$("go-copy").addEventListener("click", async (e) => {
+const b = e.currentTarget;
+try { await navigator.clipboard.writeText($("msg").textContent); b.textContent = "Texto copiado"; }
+catch (err) { b.textContent = "Seleccione el texto y cópielo"; }
+setTimeout(() => { b.textContent = "Copiar texto"; }, 2500);
+});
+["f-nombre", "f-empresa", "f-tel", "f-correo"].forEach((id) => $(id).addEventListener("input", () => { if ($(id).classList.contains("bad")) marcar(id, ""); }));
+$("logo2").src = document.querySelector("header .logo").src;
+render();
+mostrar(true);
+}
+</script>
+</body>
+</html>
